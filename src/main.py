@@ -12,7 +12,7 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 
 model = tensorflow.keras.models.Sequential()
 
-model.add(tensorflow.keras.layers.Dense(256, input_shape=x_train.shape[1], activation='sigmoid'))
+model.add(tensorflow.keras.layers.Dense(256, input_shape=(x_train.shape[1],), activation='sigmoid'))
 model.add(tensorflow.keras.layers.Dense(256, activation='sigmoid'))
 model.add(tensorflow.keras.layers.Dense(1, activation='sigmoid'))
 
